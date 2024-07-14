@@ -760,6 +760,9 @@ foreach( TEST ${sparse_testing_all} )
 endforeach()
 add_custom_target( sparse-testing DEPENDS ${sparse-testing} )
 
+SET(magma_VERSION "2.9.0")
+SET_TARGET_PROPERTIES(magma PROPERTIES VERSION ${magma_VERSION} SOVERSION ${magma_VERSION})
+SET_TARGET_PROPERTIES(magma_sparse PROPERTIES VERSION ${magma_VERSION} SOVERSION ${magma_VERSION})
 
 # ----------------------------------------
 # what to install
